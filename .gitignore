@@ -45,3 +45,9 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# added by Caladyon
+.classpath
+.project
+.settings
+target
