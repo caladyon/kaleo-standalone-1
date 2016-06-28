@@ -23,6 +23,8 @@ public class Asset {
 
     private String lastName;
 
+    private boolean deleted = false;
+
 	/**
 	 *
 	 */
@@ -82,12 +84,27 @@ public class Asset {
 		this.lastName = lastName;
 	}
 
+	/**
+	 * @return the deleted
+	 */
+	public final boolean isDeleted() {
+		return deleted;
+	}
+
+	/**
+	 * @param deleted the deleted to set
+	 */
+	public final void setDeleted(boolean deleted) {
+		this.deleted = deleted;
+	}
+
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
 	 */
 	@Override
 	public String toString() {
-		return "Asset [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + "]";
+		return "Asset [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", deleted=" + deleted + "]";
 	}
+
 
 }
