@@ -28,6 +28,13 @@
 			<scope>runtime</scope>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/com.liferay.portal/com.liferay.portal.kernel -->
+<!-- 		<dependency> -->
+<!-- 			<groupId>com.liferay.portal</groupId> -->
+<!-- 			<artifactId>com.liferay.portal.kernel</artifactId> -->
+<!-- 			<version>2.3.0</version> -->
+<!-- 		</dependency> -->
+
 		<!-- https://mvnrepository.com/artifact/com.liferay/com.liferay.portal.workflow.kaleo.definition.api -->
 		<dependency>
 			<groupId>com.liferay</groupId>

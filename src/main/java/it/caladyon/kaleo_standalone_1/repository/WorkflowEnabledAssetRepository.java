@@ -8,6 +8,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.repository.CrudRepository;
 
+import it.caladyon.kaleo_standalone_1.model.Asset;
 import it.caladyon.kaleo_standalone_1.model.WorkflowEnabledAsset;
 import it.caladyon.kaleo_standalone_1.workflow.WorkflowEnabledRepository;
 
@@ -17,10 +18,12 @@ import it.caladyon.kaleo_standalone_1.workflow.WorkflowEnabledRepository;
  */
 @Qualifier("WF")
 public interface WorkflowEnabledAssetRepository
-		extends CrudRepository<WorkflowEnabledAsset, Long>, WorkflowEnabledRepository<WorkflowEnabledAsset> {
+		extends CrudRepository<WorkflowEnabledAsset, Long>, WorkflowEnabledRepository<Asset> {
 
-	List<WorkflowEnabledAsset> findByLastName(String lastName);
+	List<Asset> findByLastName(String lastName);
 
-	List<WorkflowEnabledAsset> findByDeleted(boolean deleted);
+	List<Asset> findByDeleted(boolean deleted);
+
+	List<Asset> findByDeletedAndWorkflowStatus(boolean deleted, int workflowStatus);
 
 }

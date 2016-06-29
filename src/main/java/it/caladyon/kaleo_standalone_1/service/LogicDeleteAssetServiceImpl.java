@@ -20,15 +20,6 @@ import it.caladyon.kaleo_standalone_1.repository.AssetRepository;
 @Qualifier("noWF")
 public class LogicDeleteAssetServiceImpl implements AssetService {
 
-	@Override
-	public AssetRepository getRepository() {
-		return repository;
-	}
-
-	/**
-	 * Questo richiamo di una risorsa va migliorato...
-	 *
-	 */
 	//@Resource(name = "assetRepository")
 	@Autowired
 	@Qualifier("noWF")
@@ -57,6 +48,11 @@ public class LogicDeleteAssetServiceImpl implements AssetService {
 	public Asset delete(Asset asset) {
 		asset.setDeleted(true);
 		return repository.save(asset);
+	}
+
+	@Override
+	public void truncate() {
+		repository.deleteAll();
 	}
 
 }

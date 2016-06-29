@@ -27,6 +27,17 @@ public class WorkflowEnabledAsset extends Asset implements WorkflowEnabledEntity
 
 	private Date workflowDate;
 
+	public WorkflowEnabledAsset() {
+	}
+
+	public WorkflowEnabledAsset(Asset asset) {
+		this();
+		setId(asset.getId());
+		setFirstName(asset.getFirstName());
+		setLastName(asset.getLastName());
+		setDeleted(asset.isDeleted());
+	}
+
 	/* (non-Javadoc)
 	 * @see it.caladyon.kaleo_standalone_1.model.WorkflowEnabledEntity#getWorkflowStatus()
 	 */
