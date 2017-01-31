@@ -22,7 +22,7 @@ import it.caladyon.kaleo_standalone_1.service.AssetService;
 @SpringBootApplication
 @ImportResource({
 	// kaleo.runtime.api 2.0.0
-	"classpath:META-INF/spring/kaleo-spring.xml"
+	"classpath:META-INF/spring/kaleo-standalone-spring.xml"
 	})
 public class Application {
 
